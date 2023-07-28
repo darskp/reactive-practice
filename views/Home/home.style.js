@@ -1,11 +1,13 @@
 
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import { COLORS, FONT, SIZES } from '../../constants'
 import { Platform } from 'react-native';
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingVertical: 40,
@@ -30,7 +32,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    buttonContainer: {
+    btnContainer: {
         position: "absolute",
         bottom: 40,
         width: '100%',
@@ -56,12 +58,12 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
 
     },
-    buttonTitleStyleSkip: {
+    btnTitleStyleSkip: {
         fontWeight: "bold",
         fontSize: SIZES.medium,
         color: COLORS.primary,
     },
-    buttonTitleStyle: {
+    btnTitleStyle: {
         color: COLORS.white,
         fontWeight: "bold",
         fontSize: SIZES.medium,
@@ -72,10 +74,12 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     arrowWrapper: {
-        marginLeft: 8, 
+        marginLeft: 8,
     },
     iconRight: {
         width: 20,
         height: 20
     }
 });
+
+export default styles;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
 import { COLORS, SHADOWS, SIZES, IMAGES, FONT, ICONS } from '../../constants'
-import { styles } from './home.style';
 import { Logo } from '../../components';
+import styles from './home.style';
 
 const Home = ({ navigation }) => {
 
@@ -15,7 +15,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Logo/>
+      <Logo flex={2}/>
       <View style={styles.taglineContainer}>
         <Text style={styles.tagline}>" Own Your Growth "</Text>
       </View>
@@ -25,13 +25,13 @@ const Home = ({ navigation }) => {
           style={styles.image}
         />
       </View>
-      <View style={styles.buttonContainer}>
+      <View style={styles.btnContainer}>
         <TouchableOpacity style={styles.buttonStyle} onPress={handleSkipPress}>
-          <Text style={styles.buttonTitleStyleSkip}>Skip</Text>
+          <Text style={styles.btnTitleStyleSkip}>Skip</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.getStartedButton, styles.getStartedButtonWithArrow]} onPress={handleAboutPress}>
           <View>
-            <Text style={styles.buttonTitleStyle}>Get Started</Text>
+            <Text style={styles.btnTitleStyle}>Get Started</Text>
           </View>
           <View style={styles.arrowWrapper}>
             <Image

@@ -3,10 +3,10 @@ import { View, Text, Image} from 'react-native';
 import { COLORS, SHADOWS, SIZES, IMAGES, FONT, ICONS } from '../../../constants'
 import { styles } from './logo.style';
 
-const Logo = () => {
+const Logo = ({flex}) => {
 
   return (
-      <View style={styles.logoSection}>
+      <View style={styles.logoSection(flex)}>
         <Image
           source={IMAGES.LOGO}
           style={styles.logo}
