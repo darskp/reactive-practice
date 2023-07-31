@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        paddingHorizontal: 40,
+        paddingHorizontal: 20,
     },
     image: {
         width: 300,

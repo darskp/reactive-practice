@@ -4,21 +4,30 @@ import Login from '../views/Login/Login';
 import Home from '../views/Home/Home';
 import About from '../views/QuickTour/About';
 import { NavigationContainer } from '@react-navigation/native';
+import Register from '../views/Register/Register';
 
 const Stack = createStackNavigator();
 
-const Navigator = () => {
-
+function Routing() {
   return (
-      <Stack.Navigator screenOptions={{ headerShown: false }} style={{ backgroundColor: "white" }}>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="About" component={About} />
-    </Stack.Navigator>
+    <NavigationContainer independent={true}>
+      <Stack.Navigator style={{ backgroundColor: "white" }}>
+        {/* <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="About" component={About} /> */}
+        {/* <Stack.Screen name="Login" component={Login} /> */}
+        <Stack.Screen name="Register" component={Register} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
-export default Navigator;
+export default Routing;
+
+
+
+
+
+
 
 
 

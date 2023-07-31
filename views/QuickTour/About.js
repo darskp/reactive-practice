@@ -38,7 +38,7 @@ const About = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Logo flex={1} />
+      <Logo flex={1} marginTop={0}/>
       <View style={styles.taglineContainer}>
         <Text style={styles.tagline}>" Own Your Growth "</Text>
       </View>
@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     alignItems: 'center',
-    paddingVertical: 40,
     backgroundColor: COLORS.white,
   },
   taglineContainer: {
@@ -112,14 +111,15 @@ const styles = StyleSheet.create({
   },
   sliderContainer: {
     flex: 3,
+    marginTop:20
   },
   imageContainer: {
     justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
-    width: width * 0.8,
-    height: width * 0.8,
+    width: width * 0.7,
+    height: width * 0.7,
   },
   textContainer: {
     justifyContent: 'center',
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 15,
   },
   dot: {
     width: 8,
@@ -183,13 +183,12 @@ const styles = StyleSheet.create({
     opacity:0.8
   },
   btnContainer: {
-    position: "absolute",
-    bottom: 20,
     width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    paddingHorizontal: 40,
+    paddingHorizontal: 30,
+    paddingVertical: 30,
   },
   buttonStyle: {
     backgroundColor: "transparent",
