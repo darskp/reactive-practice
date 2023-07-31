@@ -193,9 +193,9 @@ const Login = ({ navigation }) => {
                 </View>
                 <Text style={styles.label} paddingLeft={10}>Remember me</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('About')}>
+              <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('Forgot')}>
                 <View>
-                  <Text style={styles.label}>Forgot password?</Text>
+                  <Text style={styles.label} >Forgot password?</Text>
                 </View>
               </TouchableOpacity>
             </View>
