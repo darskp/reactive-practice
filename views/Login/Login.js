@@ -5,7 +5,7 @@ import { DropDownCustom, Logo } from '../../components';
 import { TextInput } from 'react-native';
 import { Formik } from 'formik';
 import { object, string } from 'yup';
-// import { FontAwesome } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { HOST } from '../../utils/Host-URL';
 import styles from './login.style';
 const Login = ({ navigation }) => {
@@ -140,11 +140,7 @@ const Login = ({ navigation }) => {
                 paddingRight={50}
               />
               <View style={styles.iconWrapper}>
-                <Image
-                  source={ICONS.person}
-                  style={styles.iconPerson}
-                />
-                {/* <FontAwesome name='person' size={32} color="#333"/> */}
+                  <MaterialCommunityIcons name="account" size={24} color={COLORS.primary} />
               </View>
             </View>
             {touched.email && errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
@@ -159,39 +155,23 @@ const Login = ({ navigation }) => {
                 paddingRight={50}
               />
               <TouchableOpacity style={styles.iconWrapper} onPress={() => setShowPassword(!showPassword)}>
-                {showPassword ?
-                  <Image
-                    source={ICONS.showPassword}
-                    style={styles.iconRight}
-                  />
-                  : <Image
-                    source={ICONS.hidePassword}
-                    style={styles.iconRight}
-                  />
+                {!showPassword ?
+                      <MaterialCommunityIcons name="eye-off" size={20} color={COLORS.primary} />
+                  : <MaterialCommunityIcons name="eye" size={20} color={COLORS.primary} />
                 }
-                {/* {showPassword ?
-      <FontAwesome name='eye-slash' size={24} color="#333" />
-      : <FontAwesome name='eye' size={24} color="#333" />
-    } */}
               </TouchableOpacity>
             </View>
             {touched.password && errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
             <View style={styles.forgotContainer} paddingHorizontal={5}>
               <TouchableOpacity onPress={() => setSelection(!isSelected)} style={styles.boxContainer}>
-                <View>
+                <View style={{alignItems:"center",justifyContent:"center"}}>
                   {isSelected ? (
-                    <Image
-                      source={ICONS.checked}
-                      style={styles.iconcheck}
-                    />
+                    <MaterialCommunityIcons name="checkbox-marked" size={20} color={COLORS.secondary} />
                   ) : (
-                    <Image
-                      source={ICONS.unchecked}
-                      style={styles.iconcheck}
-                    />
+                     <MaterialCommunityIcons name="checkbox-blank-outline" size={20} color={COLORS.primary} />
                   )}
                 </View>
-                <Text style={styles.label} paddingLeft={10}>Remember me</Text>
+                <Text style={styles.label} paddingLeft={5}>Remember me</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('Forgot')}>
                 <View>

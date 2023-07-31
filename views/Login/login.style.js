@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     width: '85%',
     justifyContent: "center"
-
   },
   textHeading: {
     fontWeight: "bold",
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: "left",
     color: COLORS.primary,
-    lineHeight: 16,
+    lineHeight: 20,
   },
   roleContainer: {
     justifyContent: "center",
@@ -102,10 +101,12 @@ const styles = StyleSheet.create({
   boxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent:"center",
+    textAlign:"center"
   },
   label: {
     color: COLORS.primary,
-    fontSize: SIZES.medium,
+    fontSize: SIZES.medium,    
   },
   iconcheck: {
     width: 15,
@@ -149,7 +150,6 @@ const styles = StyleSheet.create({
   },
   orTextColor: {
     color: COLORS.secondary,
-    marginBottom: 0
   },
   lineColor: {
     opacity: 0.4
