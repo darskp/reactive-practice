@@ -20,8 +20,6 @@ const countries = [
   { code: "IN", label: "India", countryCode: "91" },
 ];
 
-
-
 const appIcons = [ICONS.google, ICONS.facebook, ICONS.twitter, ICONS.linkedin]
 
 const Register = ({ navigation }) => {
@@ -128,7 +126,6 @@ const Register = ({ navigation }) => {
 
   useEffect(() => {
     getRoleData();
-    // setIsVerifyButtonDisabled(false);
   }, [])
 
 
